@@ -107,33 +107,42 @@ import Layout from '../layouts/Layout.astro';
 
 		.papers-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 			gap: 2rem;
 		}
 
 		.paper-meta {
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 1.5rem;
 			margin-bottom: 3.5rem;
 		}
 
 		.paper-card {
 			padding: 4rem;
+			display: flex;
+			flex-direction: column;
 		}
 
 		.paper-card h3 {
-			font-size: 2.2rem;
+			font-size: clamp(1.8rem, 4vw, 2.2rem);
 			margin: 1.5rem 0;
-			line-height: 1.1;
+			line-height: 1.2;
 			letter-spacing: -0.02em;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			text-transform: uppercase;
 		}
 
 		.paper-card p {
 			font-family: var(--font-mono);
-			font-size: 0.95rem;
+			font-size: 0.9rem;
 			color: var(--text-muted);
 			margin-bottom: 4.5rem;
 			line-height: 1.8;
+			flex-grow: 1;
 		}
 
 		.link {
@@ -142,6 +151,7 @@ import Layout from '../layouts/Layout.astro';
 			font-weight: 700;
 			color: var(--accent-primary);
 			letter-spacing: 0.15em;
+			margin-top: auto;
 		}
 
 		.collaboration {

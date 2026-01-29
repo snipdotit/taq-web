@@ -257,23 +257,63 @@ import Layout from '../layouts/Layout.astro';
 
 		@media (max-width: 768px) {
 			.hero {
-				padding: 10rem 0 8rem;
+				padding: 8rem 0 4rem;
+				min-height: auto;
+			}
+			.hero-content {
+				margin-bottom: 4rem;
 			}
 			.hero-title {
-				font-size: 4.5rem;
+				font-size: clamp(2.8rem, 12vw, 4rem);
+				margin: 1.5rem 0;
+			}
+			.hero-desc {
+				font-size: 0.85rem;
+				margin: 0 auto 3rem;
+				padding: 0 1.5rem;
+				line-height: 1.6;
 			}
 			.hero-actions {
+				width: 100%;
 				flex-direction: column;
-				gap: 2rem;
+				gap: 1.5rem;
+				padding: 0 2rem;
+			}
+			.hero-stats-container {
+				padding: 0 1.5rem;
 			}
 			.grid {
 				grid-template-columns: 1fr;
 			}
 			.mission-stats {
-				gap: 3rem;
+				gap: 3.5rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 			}
 			.mission-inner {
-				padding: 5rem 2rem;
+				padding: 5rem 1.5rem;
+			}
+			.mission-inner h2 {
+				font-size: clamp(1.6rem, 10vw, 2.6rem);
+				margin: 1.5rem 0;
+				word-break: normal;
+				overflow-wrap: anywhere;
+			}
+			.mission-inner p {
+				font-size: 0.95rem;
+				margin-bottom: 4rem;
+				line-height: 1.6;
+			}
+			.stat-value {
+				font-size: 3rem;
+			}
+			.hero-stats {
+				gap: 3rem;
+				padding: 3rem 1.5rem;
+			}
+			.stat-item p {
+				font-size: 1.3rem;
 			}
 		}
 	</style>

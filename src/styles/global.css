@@ -34,9 +34,10 @@ body {
     color: var(--text-color);
     font-family: var(--font-body);
     line-height: 1.7;
-    /* Improved readability */
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 /* Viewport Vignette */
@@ -90,7 +91,6 @@ h3 {
     letter-spacing: 0.25em;
     color: var(--text-muted);
     display: inline-block;
-    white-space: nowrap;
 }
 
 a {
@@ -363,4 +363,53 @@ ul {
     letter-spacing: 0.1em;
     color: var(--accent-primary);
     margin-bottom: 1rem;
+}
+
+/* Global Responsive Fixes */
+@media (max-width: 992px) {
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .logo-circle {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(2.4rem, 12vw, 3.8rem);
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 0.75rem;
+    }
+
+    .btn-circle {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .mono-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+    }
 }
