@@ -183,6 +183,12 @@ ul {
     padding: 0 4rem;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
 .glass-card {
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(20px);

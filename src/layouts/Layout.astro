@@ -31,19 +31,25 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 		
 		<header class="header">
 			<nav class="container nav">
-				<a href="/" class="logo">
+				<a href="/taq-web/" class="logo">
 					<div class="logo-circle"></div>
 					<div class="logo-text-group">
 						<span class="logo-text">TAQ_LAB</span>
 						<span class="mono-label version-tag">// 001.26_ALPHA</span>
 					</div>
 				</a>
+				
+				<button class="mobile-menu-toggle" aria-label="Toggle Menu">
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+
 				<ul class="nav-links">
-					<li><a href="/"><span class="mono-label">01 </span> HOME_CORE</a></li>
-					<li><a href="/tools"><span class="mono-label">02 </span> ECOSYSTEM_LOG</a></li>
-					<li><a href="/media_vault"><span class="mono-label">03 </span> MEDIA_VAULT</a></li>
-					<li><a href="/research"><span class="mono-label">04 </span> THEORY_RES</a></li>
-					<li><a href="/about"><span class="mono-label">05 </span> ABOUT_IDENTITY</a></li>
+					<li><a href="/taq-web/"><span class="mono-label">01 </span> HOME_CORE</a></li>
+					<li><a href="/taq-web/tools"><span class="mono-label">02 </span> ECOSYSTEM_LOG</a></li>
+					<li><a href="/taq-web/media_vault"><span class="mono-label">03 </span> MEDIA_VAULT</a></li>
+					<li><a href="/taq-web/research"><span class="mono-label">04 </span> THEORY_RES</a></li>
+					<li><a href="/taq-web/about"><span class="mono-label">05 </span> ABOUT_IDENTITY</a></li>
 				</ul>
 				<div class="nav-actions">
 					<a href="https://github.com/taq-lab" target="_blank" class="btn btn-hud">
@@ -67,18 +73,18 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 				<div class="footer-links">
 					<span class="mono-label">INDEX_DIRECTORY</span>
 					<ul>
-						<li><a href="/tools">THE_ECOSYSTEM</a></li>
-						<li><a href="/media_vault">MEDIA_VAULT</a></li>
-						<li><a href="/research">RESEARCH_THEORY</a></li>
-						<li><a href="/about">IDENTITY_CORE</a></li>
+						<li><a href="/taq-web/tools">THE_ECOSYSTEM</a></li>
+						<li><a href="/taq-web/media_vault">MEDIA_VAULT</a></li>
+						<li><a href="/taq-web/research">RESEARCH_THEORY</a></li>
+						<li><a href="/taq-web/about">IDENTITY_CORE</a></li>
 					</ul>
 				</div>
 				<div class="footer-social">
 					<span class="mono-label">NETWORK_INTERFACE</span>
 					<ul>
 						<li><a href="https://github.com/taq-lab" target="_blank">GITHUB_SOURCE</a></li>
-						<li><a href="/media_vault" target="_blank">YOUTUBE_MEDIA</a></li>
-						<li><a href="/media_vault" target="_blank">X_COM_INTEL</a></li>
+						<li><a href="/taq-web/media_vault">YOUTUBE_MEDIA</a></li>
+						<li><a href="/taq-web/media_vault">X_COM_INTEL</a></li>
 					</ul>
 				</div>
 			</div>
@@ -257,12 +263,59 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 			}
 
 			@media (max-width: 992px) {
+				.header {
+					padding: 1.5rem 0;
+				}
 				.footer-content {
 					gap: 4rem;
 				}
 				.nav-links {
+					position: fixed;
+					top: 0;
+					right: -100%;
+					width: 80%;
+					height: 100vh;
+					background: var(--bg-color);
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					gap: 4rem;
+					transition: var(--transition);
+					z-index: 1001;
+					border-left: 1px solid var(--border-color);
+					backdrop-filter: blur(20px);
+				}
+				.nav-links.active {
+					right: 0;
+				}
+				.mobile-menu-toggle {
+					display: flex;
+					flex-direction: column;
+					gap: 6px;
+					background: none;
+					border: none;
+					cursor: pointer;
+					z-index: 1002;
+				}
+				.mobile-menu-toggle .bar {
+					width: 25px;
+					height: 2px;
+					background: var(--text-color);
+					transition: var(--transition);
+				}
+				.mobile-menu-toggle.active .bar:nth-child(1) {
+					transform: translateY(8px) rotate(45deg);
+				}
+				.mobile-menu-toggle.active .bar:nth-child(2) {
+					transform: translateY(-0px) rotate(-45deg);
+				}
+				.nav-actions {
 					display: none;
 				}
+			}
+
+			.mobile-menu-toggle {
+				display: none;
 			}
 
 			@media (max-width: 768px) {
@@ -272,5 +325,15 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 				}
 			}
 		</style>
+
+		<script>
+			const menuToggle = document.querySelector('.mobile-menu-toggle');
+			const navLinks = document.querySelector('.nav-links');
+
+			menuToggle?.addEventListener('click', () => {
+				menuToggle.classList.toggle('active');
+				navLinks?.classList.toggle('active');
+			});
+		</script>
 	</body>
 </html>
