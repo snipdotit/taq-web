@@ -14,7 +14,7 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/taq-web/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | TAQ Lab</title>
 		<meta name="description" content={description} />
@@ -351,10 +351,21 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 		<script>
 			const menuToggle = document.querySelector('.mobile-menu-toggle');
 			const navLinks = document.querySelector('.nav-links');
+			const navItems = document.querySelectorAll('.nav-links a');
 
-			menuToggle?.addEventListener('click', () => {
-				menuToggle.classList.toggle('active');
+			const toggleMenu = () => {
+				menuToggle?.classList.toggle('active');
 				navLinks?.classList.toggle('active');
+			};
+
+			menuToggle?.addEventListener('click', toggleMenu);
+
+			navItems.forEach(item => {
+				item.addEventListener('click', () => {
+					if (navLinks?.classList.contains('active')) {
+						toggleMenu();
+					}
+				});
 			});
 		</script>
 	</body>
