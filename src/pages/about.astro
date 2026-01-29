@@ -1,0 +1,251 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Identity">
+	<div class="bg-mesh"></div>
+	<div class="bg-grid"></div>
+
+	<section class="about-hero container animate-fade-in">
+		<div class="hero-layout">
+			<div class="hero-left">
+				<span class="mono-label">// 004 // IDENTITY_CORE</span>
+				<h1 class="page-title">THE_ <br/><span class="text-outline">TAQ_STORY</span></h1>
+				<p class="page-subtitle">FROM A SPECIALIZED RESEARCH LAB TO A GLOBAL ENGINEERING POWERHOUSE, DEFINING THE NEXT ERA OF INDUSTRIAL-GRADE SOFTWARE SYSTEMS AND AI_INFRASTRUCTURE.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="about-content container">
+		<div class="main-split">
+			<article class="text-block animate-fade-in">
+				<span class="mono-label">ORIGINS_01 // WORLDVIEW</span>
+				<h2>GLOBAL_FOUNDATIONS</h2>
+				<p>TAQ LAB IS A HIGH-PERFORMANCE ENGINEERING FIRM OPERATING AT THE INTERSECTION OF MODULAR ARCHITECTURE, AI_INFRASTRUCTURE, AND SPATIAL LOGIC. WE SPECIALIZE IN THE DEVELOPMENT OF RESILIENT SOFTWARE SYSTEMS AND ADVANCED INFERENCE OPTIMIZATION FOR GLOBAL ENTERPRISES.</p>
+				<p>OUR MISSION IS TO BUILD INFRASTRUCTURE THAT IS NOT JUST FUNCTIONAL, BUT IMMUTABLE, SCALABLE, AND SECURE BY DESIGN. WE OPERATE AS A DECENTRALIZED COLLECTIVE OF ELITE ENGINEERS DEDICATED TO SYSTEMIC INTEGRITY.</p>
+				<div class="philosophy-grid">
+					<div class="phi-item glass-card">
+						<span class="mono-label">P_01 // CORE</span>
+						<h4>AI_INFRA_OPS</h4>
+						<p>SCALABLE ARCHITECTURES DESIGNED TO POWER THE MOST DEMANDING INFERENCE WORKLOADS AT THE EDGE AND CORE.</p>
+					</div>
+					<div class="phi-item glass-card">
+						<span class="mono-label">P_02 // SKILLS</span>
+						<h4>ELITE_TRAINING</h4>
+						<p>BRIDGING THE GAP BETWEEN THEORETICAL RESEARCH AND INDUSTRIAL-GRADE ENGINEERING EXECUTION THROUGH RIGOROUS BOOTCAMPS.</p>
+					</div>
+					<div class="phi-item glass-card">
+						<span class="mono-label">P_03 // BASE</span>
+						<h4>INTEGRITY_INDEX</h4>
+						<p>SECURITY IS NOT AN ADD-ON; IT IS THE FUNDAMENTAL BASELINE OF EVERY LINE OF CODE WE COMMIT TO PRODUCTION.</p>
+					</div>
+				</div>
+			</article>
+			<aside class="stats-sidebar animate-fade-in" style="animation-delay: 0.2s">
+				<div class="glass-card stat-card">
+					<div class="stat">
+						<span class="stat-number">2024</span>
+						<span class="mono-label">INCEPTION_YEAR</span>
+					</div>
+					<div class="stat">
+						<span class="stat-number">ELITE</span>
+						<span class="mono-label">ENGINEERING_OPS</span>
+					</div>
+					<div class="stat">
+						<span class="stat-number">GBL</span>
+						<span class="mono-label">CORE_REACH</span>
+					</div>
+				</div>
+			</aside>
+		</div>
+
+		<div class="vision-mission">
+			<article class="glass-card vision-card animate-fade-in">
+				<span class="mono-label">V_01 // VISION_PLAN</span>
+				<h3>THE_FUTURE_STATE</h3>
+				<p>TO BECOME THE GLOBAL STANDARD-BEARER FOR MODULAR ENGINEERING, AI_INFRASTRUCTURE, AND INFERENCE GOVERNANCE, POWERING THE MOST CRITICAL DIGITAL INFRASTRUCTURES.</p>
+			</article>
+			<article class="glass-card mission-card animate-fade-in" style="animation-delay: 0.1s">
+				<span class="mono-label">V_02 // MISSION_DATA</span>
+				<h3>THE_CORE_PURPOSE</h3>
+				<p>TO PROVIDE GLOBAL ORGANIZATIONS WITH THE PRECISION TOOLS AND RIGOROUS RESEARCH NECESSARY TO NAVIGATE AI_ACCELERATED DELIVERY SAFELY.</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="legal-assurance container">
+		<article class="glass-card legal-card animate-fade-in">
+			<span class="mono-label">REGULATORY // 01 // GLOBAL_COMPLIANCE</span>
+			<h3>ENTITY_STATUS</h3>
+			<p>TAQ LAB OPERATES UNDER RIGOROUS INTERNATIONAL COMPLIANCE STANDARDS. OUR LEGAL STATUS, OPERATIONAL FRAMEWORKS, AND DATA SOVEREIGNTY PROTOCOLS ARE MAINTAINED WITH THE HIGHEST DEGREE OF TRANSPARENCY FOR GLOBAL PARTNERS.</p>
+			<div class="compliance-logos">
+				<div class="logo-placeholder">GBL_ENTITY_ID</div>
+				<div class="logo-placeholder">IDENTITY_VERIFIED</div>
+				<div class="logo-placeholder">CORE_PROTO_ACK</div>
+			</div>
+		</article>
+	</section>
+
+	<style>
+		.about-hero {
+			padding: 15rem 0 10rem;
+		}
+
+		.page-title {
+			font-size: clamp(4rem, 15vw, 10rem);
+			margin: 2.5rem 0;
+			line-height: 0.85;
+			letter-spacing: -0.04em;
+		}
+
+		.page-subtitle {
+			font-family: var(--font-mono);
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			max-width: 500px;
+			letter-spacing: 0.05em;
+			line-height: 1.8;
+		}
+
+		.about-content {
+			padding: 6rem 0;
+		}
+
+		.main-split {
+			display: grid;
+			grid-template-columns: 3fr 2fr;
+			gap: 8rem;
+			margin-bottom: 10rem;
+			align-items: start;
+		}
+
+		.text-block h2 {
+			font-size: 3.5rem;
+			margin: 2.5rem 0;
+			letter-spacing: -0.04em;
+		}
+
+		.text-block p {
+			font-family: var(--font-mono);
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			margin-bottom: 2.5rem;
+			line-height: 1.8;
+		}
+
+		.philosophy-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 1.5rem;
+			margin-top: 6rem;
+		}
+
+		.phi-item h4 {
+			font-size: 1.4rem;
+			margin: 1.5rem 0 1rem;
+			letter-spacing: -0.02em;
+		}
+
+		.stat-card {
+			display: flex;
+			flex-direction: column;
+			gap: 5rem;
+			text-align: center;
+			border-left: 1px solid var(--accent-primary);
+			padding: 6rem 4rem;
+		}
+
+		.stat-number {
+			font-size: 4rem;
+			font-weight: 950;
+			display: block;
+			margin-bottom: 0.75rem;
+			line-height: 1;
+		}
+
+		.vision-mission {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.5rem;
+			margin-bottom: 15rem;
+		}
+
+		.vision-mission h3 {
+			font-size: clamp(2rem, 4vw, 2.5rem);
+			margin: 2.5rem 0 1.5rem;
+			letter-spacing: -0.02em;
+			line-height: 1.1;
+		}
+
+		.vision-mission p {
+			font-family: var(--font-mono);
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			line-height: 1.8;
+		}
+
+		.legal-assurance {
+			padding-bottom: 15rem;
+		}
+
+		.legal-card {
+			text-align: center;
+			padding: 10rem 4rem;
+		}
+
+		.legal-card h3 {
+			font-size: clamp(2.5rem, 6vw, 3.5rem);
+			margin: 2.5rem 0;
+			letter-spacing: -0.02em;
+		}
+
+		.legal-card p {
+			font-family: var(--font-mono);
+			font-size: 1rem;
+			color: var(--text-muted);
+			max-width: 850px;
+			margin: 0 auto 6rem;
+			line-height: 1.8;
+		}
+
+		.compliance-logos {
+			display: flex;
+			justify-content: center;
+			gap: 5rem;
+			flex-wrap: wrap;
+		}
+
+		.logo-placeholder {
+			font-family: var(--font-mono);
+			font-size: 0.8rem;
+			font-weight: 700;
+			color: var(--text-muted);
+			padding: 1.5rem 3rem;
+			border: 1px dashed var(--border-color);
+		}
+
+		@media (max-width: 992px) {
+			.main-split {
+				grid-template-columns: 1fr;
+				gap: 5rem;
+			}
+			.vision-mission {
+				grid-template-columns: 1fr;
+			}
+			.stat-card {
+				border-left: none;
+				border-top: 1px solid var(--accent-primary);
+				padding-top: 5rem;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.page-title {
+				font-size: 4.5rem;
+			}
+			.philosophy-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</Layout>

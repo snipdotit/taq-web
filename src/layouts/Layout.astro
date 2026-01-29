@@ -1,0 +1,276 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "TAQ Lab - Innovating at the intersection of Research, Engineering, and Security." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | TAQ Lab</title>
+		<meta name="description" content={description} />
+		<!-- SEO -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+	</head>
+	<body>
+		<div class="bg-mesh"></div>
+		<div class="bg-grid"></div>
+		<div class="scanline"></div>
+		
+		<header class="header">
+			<nav class="container nav">
+				<a href="/" class="logo">
+					<div class="logo-circle"></div>
+					<div class="logo-text-group">
+						<span class="logo-text">TAQ_LAB</span>
+						<span class="mono-label version-tag">// 001.26_ALPHA</span>
+					</div>
+				</a>
+				<ul class="nav-links">
+					<li><a href="/"><span class="mono-label">01 </span> HOME_CORE</a></li>
+					<li><a href="/tools"><span class="mono-label">02 </span> ECOSYSTEM_LOG</a></li>
+					<li><a href="/media_vault"><span class="mono-label">03 </span> MEDIA_VAULT</a></li>
+					<li><a href="/research"><span class="mono-label">04 </span> THEORY_RES</a></li>
+					<li><a href="/about"><span class="mono-label">05 </span> ABOUT_IDENTITY</a></li>
+				</ul>
+				<div class="nav-actions">
+					<a href="https://github.com/taq-lab" target="_blank" class="btn btn-hud">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+						CORE_GS_ACCESS
+					</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer class="footer">
+			<div class="container footer-content">
+				<div class="footer-info">
+					<span class="mono-label">// FIRMWARE_OPS // TAQ_ENGINE_v4.5</span>
+					<p class="footer-desc">BUILDING THE NEXT GENERATION OF MODULAR AI_INFRASTRUCTURE SYSTEMS THROUGH SPATIAL LOGIC, ELITE INFERENCE_OPS, AND TECHNICAL TRAINING.</p>
+				</div>
+				<div class="footer-links">
+					<span class="mono-label">INDEX_DIRECTORY</span>
+					<ul>
+						<li><a href="/tools">THE_ECOSYSTEM</a></li>
+						<li><a href="/media_vault">MEDIA_VAULT</a></li>
+						<li><a href="/research">RESEARCH_THEORY</a></li>
+						<li><a href="/about">IDENTITY_CORE</a></li>
+					</ul>
+				</div>
+				<div class="footer-social">
+					<span class="mono-label">NETWORK_INTERFACE</span>
+					<ul>
+						<li><a href="https://github.com/taq-lab" target="_blank">GITHUB_SOURCE</a></li>
+						<li><a href="/media_vault" target="_blank">YOUTUBE_MEDIA</a></li>
+						<li><a href="/media_vault" target="_blank">X_COM_INTEL</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="container copyright">
+				<div class="copyright-inner">
+					<p>&copy; {new Date().getFullYear()} TAQ_LAB_GBL // ALL_RIGHTS_RESERVED_CORE.</p>
+					<span class="mono-label">ENCRYPTED_SSL_ACTIVE</span>
+				</div>
+			</div>
+		</footer>
+
+		<style>
+			.header {
+				padding: 3rem 0;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: linear-gradient(to bottom, var(--bg-color) 40%, transparent);
+				z-index: 1000;
+				backdrop-filter: blur(10px);
+				border-bottom: 1px solid var(--border-color);
+			}
+
+			.nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 2rem;
+			}
+
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				text-decoration: none;
+				color: var(--text-color);
+				flex-shrink: 0;
+			}
+
+			.logo-text-group {
+				display: flex;
+				flex-direction: column;
+				line-height: 1;
+				white-space: nowrap;
+			}
+
+			.logo-text {
+				font-family: var(--font-heading);
+				font-weight: 900;
+				font-size: 1.4rem;
+				letter-spacing: -0.02em;
+			}
+
+			.version-tag {
+				font-size: 0.65rem;
+				opacity: 0.8;
+				margin-top: 0.25rem;
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 3rem;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				flex-grow: 1;
+				justify-content: center;
+			}
+
+			.nav-links li {
+				white-space: nowrap;
+			}
+
+			.nav-links a {
+				font-size: 0.8rem;
+				font-weight: 700;
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				color: var(--text-color);
+				transition: var(--transition);
+				text-transform: uppercase;
+			}
+
+			.nav-links a:hover {
+				color: var(--accent-primary);
+				transform: translateY(-2px);
+			}
+
+			.nav-actions {
+				flex-shrink: 0;
+			}
+
+			.btn-hud {
+				padding: 0.75rem 1.5rem;
+				font-size: 0.75rem;
+				border-color: var(--border-color);
+				font-family: var(--font-mono);
+				letter-spacing: 0.1em;
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				white-space: nowrap;
+			}
+
+			.footer {
+				padding: 10rem 0 5rem;
+				border-top: 1px solid var(--border-color);
+				position: relative;
+			}
+
+			.footer-content {
+				display: grid;
+				grid-template-columns: 2fr 1fr 1fr;
+				gap: 8rem;
+				margin-bottom: 8rem;
+			}
+
+			.footer-desc {
+				font-family: var(--font-mono);
+				font-size: 0.9rem;
+				color: var(--text-muted);
+				margin-top: 3rem;
+				max-width: 450px;
+				line-height: 1.8;
+			}
+
+			.footer ul {
+				margin-top: 3rem;
+				list-style: none;
+				padding: 0;
+			}
+
+			.footer ul li {
+				margin-bottom: 1.5rem;
+			}
+
+			.footer ul a {
+				font-size: 0.8rem;
+				font-weight: 700;
+				color: var(--text-color);
+				letter-spacing: 0.15em;
+				transition: var(--transition);
+				text-transform: uppercase;
+			}
+
+			.footer ul a:hover {
+				color: var(--accent-primary);
+				padding-left: 1rem;
+				letter-spacing: 0.25em;
+			}
+
+			.copyright {
+				padding-top: 5rem;
+				border-top: 1px solid var(--border-color);
+			}
+
+			.copyright-inner {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.copyright p {
+				font-family: var(--font-mono);
+				font-size: 0.75rem;
+				color: var(--text-muted);
+				letter-spacing: 0.1em;
+			}
+
+			@media (max-width: 1200px) {
+				.nav-links {
+					gap: 1.5rem;
+				}
+			}
+
+			@media (max-width: 992px) {
+				.footer-content {
+					gap: 4rem;
+				}
+				.nav-links {
+					display: none;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.footer-content {
+					grid-template-columns: 1fr;
+					gap: 5rem;
+				}
+			}
+		</style>
+	</body>
+</html>

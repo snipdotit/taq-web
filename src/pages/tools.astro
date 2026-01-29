@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Our Ecosystem">
+	<div class="bg-mesh"></div>
+	<div class="bg-grid"></div>
+
+	<section class="tools-hero container animate-fade-in">
+		<div class="hero-layout">
+			<div class="hero-left">
+				<span class="mono-label">// 002 // DIRECTORY_LIST</span>
+				<h1 class="page-title">THE_ <br/><span class="text-outline">ECOSYSTEM</span></h1>
+				<p class="page-subtitle">A COLLECTION OF PRECISION-ENGINEERED TOOLS DESIGNED TO AUTOMATE, SECURE, AND SCALE YOUR DEVELOPMENT WORKFLOW.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="tool-section container">
+		<div class="tool-list">
+			<div class="tool-item glass-card animate-fade-in">
+				<div class="tool-info">
+					<span class="mono-label">TYPE // GOV_SECURITY</span>
+					<h2>ALMAG</h2>
+					<p>THE SAFETY RAIL FOR AI-ACCELERATED DEVELOPMENT. ENFORCEABLE RELEASE GOVERNANCE WITH FULL TRACEABILITY.</p>
+					<ul class="feature-tags">
+						<li><span class="mono-label">GA_CORE_01</span></li>
+						<li><span class="mono-label">SEC_AUTO_OPS</span></li>
+					</ul>
+					<a href="https://taiwrash.github.io/almag" target="_blank" class="btn btn-primary">SYSTEM_VIEW &rarr;</a>
+				</div>
+			</div>
+
+			<div class="tool-item glass-card animate-fade-in" style="animation-delay: 0.1s">
+				<div class="tool-info">
+					<span class="mono-label">TYPE // INFRA_AUTO</span>
+					<h2>TRIGRA</h2>
+					<p>HIGH-PERFORMANCE INFRASTRUCTURE AUTOMATION. SIMPLIFY MICROSERVICES DEPLOYMENT AT GLOBAL SCALE.</p>
+					<ul class="feature-tags">
+						<li><span class="mono-label">IA_CORE_02</span></li>
+						<li><span class="mono-label">INFRA_STRAT</span></li>
+					</ul>
+					<a href="https://taiwrash.github.io/trigra" target="_blank" class="btn btn-primary">SYSTEM_VIEW &rarr;</a>
+				</div>
+			</div>
+
+			<div class="tool-item glass-card animate-fade-in" style="animation-delay: 0.2s">
+				<div class="tool-info">
+					<span class="mono-label">TYPE // AI_INFERENCE</span>
+					<h2>CORE_INFRA</h2>
+					<p>ADVANCED OPTIMIZATION FOR DISTRIBUTED AI INFERENCE. SCALE MODELS ACROSS GLOBAL MOTHERBOARDS.</p>
+					<ul class="feature-tags">
+						<li><span class="mono-label">INFER_GS_01</span></li>
+						<li><span class="mono-label">AI_OPS_PRO</span></li>
+					</ul>
+					<a href="/media_vault" class="btn btn-primary">PREVIEW_OPS &rarr;</a>
+				</div>
+			</div>
+
+			<div class="tool-item glass-card animate-fade-in" style="animation-delay: 0.3s">
+				<div class="tool-info">
+					<span class="mono-label">TYPE // ELITE_SKILLS</span>
+					<h2>TRAINING_OPS</h2>
+					<p>TECHNICAL BOOTCAMPS FOR ELITE ENGINEERING TEAMS. MASTER AI_INFRA, DEVOPS, AND SECURITY ARCHITECTURE.</p>
+					<ul class="feature-tags">
+						<li><span class="mono-label">SKILL_GA_03</span></li>
+						<li><span class="mono-label">OPS_ACADEMY</span></li>
+					</ul>
+					<a href="https://youtube.com/taiwrash/streams" target="_blank" class="btn btn-primary">SESSIONS_VIEW &rarr;</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		.tools-hero {
+			padding: 15rem 0 10rem;
+		}
+
+		.page-title {
+			font-size: clamp(4rem, 15vw, 10rem);
+			margin: 2.5rem 0;
+			line-height: 0.85;
+			letter-spacing: -0.04em;
+		}
+
+		.page-subtitle {
+			font-family: var(--font-mono);
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			max-width: 500px;
+			letter-spacing: 0.05em;
+			line-height: 1.8;
+		}
+
+		.tool-section {
+			padding: 6rem 0 15rem;
+		}
+
+		.tool-list {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+
+		.tool-item {
+			padding: 4rem;
+		}
+
+		.tool-info h2 {
+			font-size: 3.5rem;
+			margin: 2.5rem 0;
+			letter-spacing: -0.04em;
+		}
+
+		.tool-info p {
+			font-family: var(--font-mono);
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			margin-bottom: 4rem;
+			line-height: 1.8;
+		}
+
+		.feature-tags {
+			display: flex;
+			gap: 2.5rem;
+			margin-bottom: 4.5rem;
+		}
+
+		@media (max-width: 768px) {
+			.tool-list {
+				grid-template-columns: 1fr;
+			}
+			.page-title {
+				font-size: 4.5rem;
+			}
+			.tool-info h2 {
+				font-size: 2.5rem;
+			}
+		}
+	</style>
+</Layout>

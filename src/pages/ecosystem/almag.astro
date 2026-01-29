@@ -1,0 +1,279 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Almag - AI Safety Governance">
+	<div class="bg-mesh"></div>
+	<div class="bg-grid"></div>
+
+	<section class="project-hero container animate-fade-in">
+		<div class="hero-layout">
+			<div class="hero-left">
+				<div class="mono-label animate-fade-in">// 001 // SEC_GOVERNANCE</div>
+				<h1 class="project-title animate-fade-in">
+					AL<span class="text-outline">MAG</span>
+				</h1>
+				<p class="hero-desc animate-fade-in">
+					WE ENGINEER ENFORCEABLE RELEASE GATES THROUGH SPATIAL LOGIC AND ADVANCED RISK_TRIAGE_OPS.
+				</p>
+				<div class="hero-actions animate-fade-in" style="animation-delay: 0.2s">
+					<a href="https://github.com/almag" target="_blank" class="btn-circle">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+					</a>
+					<span class="mono-label">EXPLORE_SOURCE_CORE</span>
+				</div>
+			</div>
+			<div class="hero-right animate-fade-in" style="animation-delay: 0.4s">
+				<div class="tech-stats glass-card">
+					<div class="stat-item">
+						<span class="mono-label">AVAILABILITY</span>
+						<p>PRODUCTION_READY</p>
+					</div>
+					<div class="stat-item">
+						<span class="mono-label">VERSION_FIX</span>
+						<p>V2.1.0-STABLE</p>
+					</div>
+					<div class="stat-item">
+						<span class="mono-label">LICENSE_TYPE</span>
+						<p>MIT_OPEN_SOURCE</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="project-details container">
+		<div class="details-grid">
+			<article class="main-content animate-fade-in" style="animation-delay: 0.6s">
+				<span class="mono-label">// THE_SOLUTION_CORE</span>
+				<h2>THE SAFETY RAIL FOR <br/> AI_ACCELERATED_DEV</h2>
+				<p>ALMAG ANSWERS THE ONE HARD QUESTION FOR EVERY RELEASE: "CAN WE SHIP SAFELY RIGHT NOW?" AS DEVELOPMENT ACCELERATES, ALMAG AGGREGATES SIGNALS INTO AN ACTIONABLE DECISION ENGINE WITH FULL OWNERSHIP AND TRACEABILITY.</p>
+				
+				<div class="capability-grid">
+					<div class="capability-item glass-card">
+						<span class="mono-label">01 // CORE_ENGINE</span>
+						<h3>DECISION_NODE</h3>
+						<p>Automated Go/No-Go signals based on active risks and organizational policies.</p>
+					</div>
+					<div class="capability-item glass-card">
+						<span class="mono-label">02 // OWNERSHIP</span>
+						<h3>TRIAGE_FLOW_OPS</h3>
+						<p>Assign clear owners to every finding to eliminate risk ambiguity.</p>
+					</div>
+					<div class="capability-item glass-card">
+						<span class="mono-label">03 // METRICS</span>
+						<h3>SLA_TRACKER_GS</h3>
+						<p>Automated fix deadlines based on severity to maintain security posture.</p>
+					</div>
+					<div class="capability-item glass-card">
+						<span class="mono-label">04 // INPUT_SYNC</span>
+						<h3>UNIFIED_INGEST</h3>
+						<p>Ingestion for Trivy, Gitleaks, Grype, Semgrep, and custom SARIF.</p>
+					</div>
+				</div>
+			</article>
+			
+			<aside class="sidebar animate-fade-in" style="animation-delay: 0.8s">
+				<div class="glass-card side-info">
+					<span class="mono-label">// TECH_STACK_OPS</span>
+					<ul class="tag-list">
+						<li>GO (GOLANG)</li>
+						<li>REACT / VITE</li>
+						<li>SQLITE_DB</li>
+						<li>DOCKER_IMG</li>
+						<li>GHA_CI_CD</li>
+					</ul>
+					<div class="divider"></div>
+					<a href="/media_vault" class="btn btn-primary">TECHNICAL_DOCS_GS</a>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	<section class="project-preview container animate-fade-in" style="animation-delay: 1s">
+		<div class="glass-card preview-card">
+			<span class="mono-label">// TECHNICAL_PREVIEW // SYSTEM_DEMO_v2.1</span>
+			<div class="video-aspect">
+				<iframe 
+					width="100%" 
+					height="100%" 
+					src="https://www.youtube.com/embed/sFr7Uynu8GY" 
+					title="ALMAG_SEC_GATE_DEMO" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+			</div>
+			<div class="preview-info">
+				<p>REAL-TIME DEMONSTRATION OF ALMAG ENFORCING PRODUCTION SAFETY RAILS WITHIN A DISTRIBUTED CI_CD ENVIRONMENT.</p>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		.project-preview {
+			padding: 0 0 15rem;
+		}
+
+		.preview-card {
+			padding: 6rem;
+		}
+
+		.video-aspect {
+			aspect-ratio: 16 / 9;
+			background: #000;
+			margin: 4rem 0;
+			border: 1px solid var(--border-color);
+		}
+
+		.preview-info p {
+			font-family: var(--font-mono);
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			text-align: center;
+			letter-spacing: 0.05em;
+		}
+
+		.project-hero {
+			padding: 15rem 0 10rem;
+			min-height: 80vh;
+			display: flex;
+			align-items: center;
+		}
+
+		.hero-layout {
+			display: grid;
+			grid-template-columns: 1.2fr 0.8fr;
+			gap: 8rem;
+			width: 100%;
+		}
+
+		.project-title {
+			line-height: 0.85;
+			margin: 2.5rem 0;
+			letter-spacing: -0.06em;
+		}
+
+		.hero-desc {
+			font-family: var(--font-mono);
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			max-width: 450px;
+			letter-spacing: 0.05em;
+			line-height: 1.8;
+			margin-bottom: 4.5rem;
+		}
+
+		.hero-actions {
+			display: flex;
+			align-items: center;
+			gap: 3rem;
+		}
+
+		.tech-stats {
+			display: flex;
+			flex-direction: column;
+			gap: 4.5rem;
+			border-radius: 0;
+			border-left: 1px solid var(--accent-primary);
+			padding: 6rem 4rem;
+		}
+
+		.stat-item p {
+			font-size: 1.6rem;
+			font-weight: 950;
+			margin-top: 1rem;
+		}
+
+		.project-details {
+			padding: 8rem 0 15rem;
+		}
+
+		.details-grid {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 10rem;
+		}
+
+		h2 {
+			font-size: clamp(2.5rem, 5vw, 4.2rem);
+			margin: 2.5rem 0;
+			letter-spacing: -0.02em;
+			line-height: 1;
+		}
+
+		.capability-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+			margin-top: 6rem;
+		}
+
+		.capability-item {
+			padding: 4rem;
+		}
+
+		.capability-item h3 {
+			font-size: 1.8rem;
+			margin: 1.5rem 0 1.2rem;
+			letter-spacing: -0.02em;
+		}
+
+		.capability-item p {
+			font-size: 1rem;
+			color: var(--text-muted);
+			line-height: 1.6;
+		}
+
+		.tag-list {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+			margin: 3rem 0;
+		}
+
+		.tag-list li {
+			font-family: var(--font-mono);
+			font-size: 0.85rem;
+			color: var(--text-color);
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.tag-list li::before {
+			content: '>';
+			color: var(--accent-primary);
+		}
+
+		.divider {
+			height: 1px;
+			background: var(--border-color);
+			margin: 3rem 0;
+		}
+
+		@media (max-width: 992px) {
+			.hero-layout {
+				grid-template-columns: 1fr;
+				gap: 5rem;
+			}
+			.details-grid {
+				grid-template-columns: 1fr;
+				gap: 5rem;
+			}
+			.tech-stats {
+				border-left: none;
+				border-top: 1px solid var(--accent-primary);
+			}
+		}
+
+		@media (max-width: 768px) {
+			.project-title {
+				font-size: 4.5rem;
+			}
+			.capability-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</Layout>
