@@ -42,6 +42,7 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 				<button class="mobile-menu-toggle" aria-label="Toggle Menu">
 					<span class="bar"></span>
 					<span class="bar"></span>
+					<span class="bar"></span>
 				</button>
 
 				<ul class="nav-links">
@@ -264,8 +265,9 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 
 			@media (max-width: 992px) {
 				.header {
-					padding: 1rem 0;
-					background: rgba(2, 2, 2, 0.8);
+					padding: 1.5rem 0;
+					background: var(--bg-color);
+					border-bottom: 1px solid var(--border-color);
 				}
 				.nav {
 					padding: 0 1.5rem;
@@ -295,11 +297,11 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
-					gap: 5px;
-					background: none;
+					gap: 6px;
+					background: transparent;
 					border: none;
-					width: 30px;
-					height: 30px;
+					width: 32px;
+					height: 32px;
 					padding: 0;
 					cursor: pointer;
 					z-index: 1002;
@@ -309,12 +311,16 @@ const { title, description = "TAQ Lab - Innovating at the intersection of Resear
 					height: 2px;
 					background: var(--text-color);
 					transition: var(--transition);
+					display: block;
 				}
 				.mobile-menu-toggle.active .bar:nth-child(1) {
-					transform: translateY(7px) rotate(45deg);
+					transform: translateY(8px) rotate(45deg);
 				}
 				.mobile-menu-toggle.active .bar:nth-child(2) {
-					transform: translateY(-0px) rotate(-45deg);
+					opacity: 0;
+				}
+				.mobile-menu-toggle.active .bar:nth-child(3) {
+					transform: translateY(-8px) rotate(-45deg);
 				}
 				.nav-actions {
 					display: none;
